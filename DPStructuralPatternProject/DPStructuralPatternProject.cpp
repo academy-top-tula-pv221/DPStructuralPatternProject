@@ -66,23 +66,77 @@ void CompositeExample()
 }
 */
 
-#include "Decorator.h"
+//
+//#include "Decorator.h"
+//void DecoratorExample()
+//{
+//    IMessage* messageWathup = new EmailMessage();
+//    messageWathup->Send();
+//    cout << "\n";
+//
+//    messageWathup = new FileMessage(messageWathup, "photoFoma.jpg");
+//    messageWathup->Send();
+//    cout << "\n";
+//
+//    messageWathup = new ContactMessage(messageWathup, "Afonya 123-45-67");
+//    messageWathup->Send();
+//    cout << "\n";
+//
+//    messageWathup = new FileMessage(messageWathup, "photoKlyazma.jpg");
+//    messageWathup->Send();
+//    cout << "\n";
+//}
+
+//
+//#include "Facade.h"
+//void FacadeExample()
+//{
+//    VisualStudioFacade* vs = new VisualStudioFacade(
+//        new TextEditor(),
+//        new Compiller(),
+//        new Debugger(),
+//        new RunTime()
+//    );
+//
+//    vs->Start();
+//    vs->Finish();
+//}
+
+#include "Flyweight.h"
 
 int main()
 {
-    IMessage* messageWathup = new EmailMessage();
-    messageWathup->Send();
-    cout << "\n";
+    BookBad b1("War and Piece", "Leo", "Tolstoy");
+    BookBad b2("Anna Karenina", "Leo", "Tolstoy");
+    BookBad b3("Sevastopol stories", "Leo", "Tolstoy");
 
-    messageWathup = new FileMessage(messageWathup, "photoFoma.jpg");
-    messageWathup->Send();
-    cout << "\n";
+    Author author("Leo", "Tolstoy");
+    BookGood book1("War and Piece", &author);
+    BookGood book2("Anna Karenina", &author);
+    BookGood book3("Sevastopol stories", &author);
 
-    messageWathup = new ContactMessage(messageWathup, "Afonya 123-45-67");
-    messageWathup->Send();
-    cout << "\n";
+    cout << "\n Hoses:\n";
+    double longitude = 37.65;
+    double latitude = 55.65;
 
-    messageWathup = new FileMessage(messageWathup, "photoKlyazma.jpg");
-    messageWathup->Send();
-    cout << "\n";
+    HouseFactory factory;
+    for (int i = 0; i < 5; i++)
+    {
+        House* house = factory.GetHouse("Panel");
+        if (house != nullptr)
+            house->Build(longitude, latitude);
+        longitude += 0.1;
+        latitude += 0.1;
+    }
+
+    for (int i = 0; i < 5; i++)
+    {
+        House* house = factory.GetHouse("Brick");
+        if (house != nullptr)
+            house->Build(longitude, latitude);
+        longitude += 0.1;
+        latitude += 0.1;
+    }
+        
+
 }
