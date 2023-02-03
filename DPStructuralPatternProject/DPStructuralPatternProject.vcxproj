@@ -136,6 +136,7 @@
     <ClInclude Include="Decorator.h" />
     <ClInclude Include="Facade.h" />
     <ClInclude Include="Flyweight.h" />
+    <ClInclude Include="Proxy.h" />
     <ClInclude Include="StrategyGame.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

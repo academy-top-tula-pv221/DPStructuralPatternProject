@@ -102,41 +102,46 @@ void CompositeExample()
 //    vs->Finish();
 //}
 
-#include "Flyweight.h"
+//
+//#include "Flyweight.h"
+//void FlyweightExample()
+//{
+//    BookBad b1("War and Piece", "Leo", "Tolstoy");
+//    BookBad b2("Anna Karenina", "Leo", "Tolstoy");
+//    BookBad b3("Sevastopol stories", "Leo", "Tolstoy");
+//
+//    Author author("Leo", "Tolstoy");
+//    BookGood book1("War and Piece", &author);
+//    BookGood book2("Anna Karenina", &author);
+//    BookGood book3("Sevastopol stories", &author);
+//
+//    cout << "\n Hoses:\n";
+//    double longitude = 37.65;
+//    double latitude = 55.65;
+//
+//    HouseFactory factory;
+//    for (int i = 0; i < 5; i++)
+//    {
+//        House* house = factory.GetHouse("Panel");
+//        if (house != nullptr)
+//            house->Build(longitude, latitude);
+//        longitude += 0.1;
+//        latitude += 0.1;
+//    }
+//
+//    for (int i = 0; i < 5; i++)
+//    {
+//        House* house = factory.GetHouse("Brick");
+//        if (house != nullptr)
+//            house->Build(longitude, latitude);
+//        longitude += 0.1;
+//        latitude += 0.1;
+//    }
+//}
 
 int main()
 {
-    BookBad b1("War and Piece", "Leo", "Tolstoy");
-    BookBad b2("Anna Karenina", "Leo", "Tolstoy");
-    BookBad b3("Sevastopol stories", "Leo", "Tolstoy");
-
-    Author author("Leo", "Tolstoy");
-    BookGood book1("War and Piece", &author);
-    BookGood book2("Anna Karenina", &author);
-    BookGood book3("Sevastopol stories", &author);
-
-    cout << "\n Hoses:\n";
-    double longitude = 37.65;
-    double latitude = 55.65;
-
-    HouseFactory factory;
-    for (int i = 0; i < 5; i++)
-    {
-        House* house = factory.GetHouse("Panel");
-        if (house != nullptr)
-            house->Build(longitude, latitude);
-        longitude += 0.1;
-        latitude += 0.1;
-    }
-
-    for (int i = 0; i < 5; i++)
-    {
-        House* house = factory.GetHouse("Brick");
-        if (house != nullptr)
-            house->Build(longitude, latitude);
-        longitude += 0.1;
-        latitude += 0.1;
-    }
+    
         
 
 }
